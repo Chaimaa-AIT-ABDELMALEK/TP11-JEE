@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+
+<h2>Tableau de bord Admin </h2>
+
+<p>Vous êtes connecté en tant qu'administrateur.</p>
+
+<a th:href="@{/home}">Retour à l'accueil</a><br><br>
+
+<form th:action="@{/logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Se déconnecter</button>
+</form>
+
+</body>
+</html>
